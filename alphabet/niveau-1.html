@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>L'alphabet Arabe: exercice niveau 1</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendors/animate.min.css">
+    <link rel="stylesheet" href="/vendors/nprogress.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77239249-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+     <body>
+        <div class="modal modal-fullscreen fade" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h4 class="text-xs-center display-4" id="myModalLabel">
+                                Instructions
+                            </h4>
+                            <hr>
+                            <p class="text-muted">
+                                Essayer de deviner la prononciation de la lettre arabe proposée. Afficher la solution en ciquant sur le bouton solution ou en appuyant sur la barre d'espace.
+                            </p>
+                            <p class="text-muted">
+                                Lorsque la solution s'affiche, la lettre est prononcée avec une voyelle courte (a). Vous pouvez couper le son si vous le souhaitez.
+                            </p>
+                            <p class="text-muted">
+                                Vous pouvez utiliser des raccourcis clavier pour afficher la solution (barre espace) et la flèche de droite pour passer à la prochaine lettre.
+                            </p>
+                            <p class="text-muted">
+                                Vous pouvez changer le sens de l'apprentissage, en passant de la phonétique à la lettre arabe.
+                            </p>
+                            <p class="text-muted">
+                                Si vous avez un doute et que vous voulez revoir votre connaissance de l'alphabet arabe, retourner à la <a href="http://apprendrearabe.eu/alphabet/lecon-1">leçon 1</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="http://apprendrearabe.eu">
+                <i class="fa fa-arrow-left text-muted" aria-hidden="true" style="font-size: 25px;"></i>
+            </a>
+            <a href="#" data-toggle="modal" data-target="#modal-fullscreen">
+                <i class="fa fa-question-circle pull-right text-muted" aria-hidden="true" style="font-size: 25px;"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-xs-center">
+            <p class="lead text-muted" style="margin-bottom: 3px;">
+                Niveau 1
+            </p>
+            <h1>
+                L'alphabet Arabe
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div id="app">
+    <div class="container">
+        <div class="col-md-12 text-xs-center">
+            <img src="/img/ring.gif" alt="loading" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row text-xs-center">
+        <div class="col-lg-4 col-lg-offset-4 text-xs-center">
+            <br>
+            <button class="btn btn-secondary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-fullscreen">
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Instructions
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<script src="/vendors/nprogress.js"></script>
+<script>
+
+    NProgress.start();
+    setTimeout( function() {
+        NProgress.done();
+    }, 1000);
+
+    $( document ).ready( function() {
+
+        $('a').on( 'click' , function(){
+            if( $(this).attr('href') != '#' ){
+                NProgress.start();
+            }
+        });
+    });
+</script>
+
+<script src="/vendors/react.min.js"></script>
+<script src="/vendors/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="/vendors/keymaster.js"></script>
+
+
+<script src="/resources/letters.js"></script>
+<script type="text/babel">
+
+    const MultiLetter = React.createClass({
+        render: function() {
+            return  <font>
+                {this.props.beg}
+                <font className="text-muted">
+                    ـ
+                </font>
+                <font className="text-muted">
+                    ـ
+                </font>
+                    {this.props.mid}
+                <font className="text-muted">
+                    ـ
+                </font>
+                <font className="text-muted">
+                    ـ
+                </font>
+                {this.props.end}
+            </font>
+        }
+    });
+
+    const Mute = React.createClass({
+        render: function() {
+            return <ul className="list-group list-group-flush">
+                <li className="list-group-item text-xs-center text-primary">
+                    <h1>
+                        {this.props.way ? this.props.arabic : this.props.phonetics}
+                    </h1>
+                </li>
+                <li className="list-group-item text-xs-center">
+                    <em className="lead">
+                        {this.props.way ? <MultiLetter beg={this.props.beg} mid={this.props.mid} end={this.props.end} /> : this.props.phonetics_desc}
+                    </em>
+                </li>
+            </ul>;
+        }
+    });
+
+    const Solution = React.createClass({
+        render: function() {
+            return <ul className="list-group list-group-flush">
+                <li className="list-group-item text-xs-center">
+                    <h1>
+                        <span className="text-muted">
+                            {this.props.way ? this.props.arabic : this.props.phonetics}
+                        </span> ↦ <span className="text-danger">
+                            {this.props.way ? this.props.phonetics : this.props.arabic}
+                        </span>
+                    </h1>
+                </li>
+                <li className="list-group-item text-xs-center">
+                    <em className="text-muted lead">
+                        {this.props.way ? this.props.phonetics_desc : <MultiLetter beg={this.props.beg} mid={this.props.mid} end={this.props.end} />}
+                    </em>
+                </li>
+            </ul>;
+        }
+    });
+
+    const Flashcards = React.createClass({
+
+        getInitialState: function(){
+
+            var letter = letters[Math.floor(Math.random()*letters.length)];
+
+            var returnState = {
+                learn: true ,
+                arabic: letter.arabic ,
+                phonetics: letter.phonetics ,
+                phonetics_desc : letter.phonetics_desc ,
+                beg: letter.beg ,
+                mid: letter.mid ,
+                end: letter.end ,
+                sound: letter.sound ,
+                way: true ,
+                is_sound: true
+            } ;
+
+            return returnState;
+        },
+
+        componentDidMount: function(){
+            key( 'right', this.nextletter );
+            key( 'space, enter', this.switchcard );
+        },
+
+        changeWay: function(){
+            this.setState({ way: !this.state.way });
+        },
+
+        switchcard: function(){
+            
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'SwitchCard',
+              eventAction: 'SwitchCard'
+            });
+
+
+            if ( this.state.learn ) {
+
+                try {
+                    if ( this.state.is_sound ) {
+                        var msg = new SpeechSynthesisUtterance();
+                        msg.text = this.state.sound ;
+                        msg.lang = 'ar-SA' ;
+                        window.speechSynthesis.speak(msg);
+                    }
+                }
+                catch (e) {
+                   console.log(e);
+                }
+
+                this.setState({
+                    learn: false
+                });
+
+            } else {
+                var letter = letters[Math.floor(Math.random()*letters.length)];
+
+                this.setState({
+                    learn: true ,
+                    arabic: letter.arabic ,
+                    phonetics: letter.phonetics ,
+                    beg: letter.beg ,
+                    mid: letter.mid ,
+                    end: letter.end ,
+                    phonetics_desc : letter.phonetics_desc ,
+                    sound: letter.sound
+                });
+            }
+
+        },
+
+        changeWay: function(){
+            this.setState({ way: !this.state.way });
+        },
+
+        toggleAudio: function(){
+            this.setState({ is_sound: !this.state.is_sound });
+        },
+
+        nextletter: function(){
+
+            var letter = letters[Math.floor(Math.random()*letters.length)];
+
+            this.setState({
+                learn: true ,
+                arabic: letter.arabic ,
+                phonetics: letter.phonetics ,
+                beg: letter.beg ,
+                mid: letter.mid ,
+                end: letter.end ,
+                phonetics_desc : letter.phonetics_desc ,
+                sound: letter.sound
+            });
+        },
+
+        render: function() {
+            return <div className="container">
+                <div className="row">
+                    <div className="col-lg-4 col-lg-offset-4 text-xs-center">
+                        <label className="c-input c-checkbox">
+                            <input type="checkbox" checked={this.state.is_sound} onChange={this.toggleAudio}/>
+                            <span className="c-indicator"></span>
+                            <small className= "text-muted">
+                                <i className="fa fa-volume-up" aria-hidden="true"></i> Prononciation audio
+                            </small>
+                        </label>
+                    </div>
+                </div>
+                <br/>
+                <div className="row">
+                    <div className="col-lg-4 col-lg-offset-4">
+                        <div className={ this.state.learn ? 'animated fadeIn card' : 'card hidden-xs-up' }>
+                            <div className="card-header text-xs-center">
+                                Prononciation ?
+                            </div>
+                            <Mute arabic={this.state.arabic} beg={this.state.beg} mid={this.state.mid} end={this.state.end} phonetics={this.state.phonetics} phonetics_desc={this.state.phonetics_desc} way={this.state.way} />
+                            <div className="card-block">
+                                <a href="#" className="btn btn-primary btn-block" onClick={this.switchcard}>
+                                    Solution
+                                </a>
+                            </div>
+                        </div>
+                        <div className={ this.state.learn ? 'card hidden-xs-up' : 'card' }>
+                            <div className="card-header text-xs-center">
+                                Solution
+                            </div>
+                            <Solution arabic={this.state.arabic} beg={this.state.beg} mid={this.state.mid} end={this.state.end} phonetics={this.state.phonetics} phonetics_desc={this.state.phonetics_desc} sound={this.state.sound} way={this.state.way} />
+                            <div className="card-block">
+                                <a href="#" className="btn btn-primary btn-block" onClick={this.nextletter}>
+                                    Lettre suivante ↦
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-4 col-lg-offset-4 text-xs-center text-muted">
+                        <small>
+                            Dans quel sens souhaitez vous apprendre l&rsquo;alphabet arabe ?
+                        </small>
+                        <br/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-4 col-lg-offset-4 text-xs-center">
+                        <label className="c-input c-radio">
+                        <input id="radio1" name="radio" type="radio" checked={this.state.way} onChange={this.changeWay} />
+                        <span className="c-indicator"></span>
+                            <small>Arabe ↦ Phonétique</small>
+                        </label>
+                        <label className="c-input c-radio">
+                        <input id="radio2" name="radio" type="radio" checked={!this.state.way} onChange={this.changeWay} />
+                        <span className="c-indicator"></span>
+                            <small>Phonétique ↦ Arabe</small>
+                        </label>
+                    </div>
+                </div>
+            </div>;
+        }
+    });
+
+    ReactDOM.render(
+        <Flashcards />,
+        document.getElementById('app')
+    );
+</script>
+
+    </body>
+</html>

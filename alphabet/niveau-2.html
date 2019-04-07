@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>L'alphabet Arabe: exercice niveau 2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendors/animate.min.css">
+    <link rel="stylesheet" href="/vendors/nprogress.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77239249-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+     <body>
+        <div class="modal modal-fullscreen fade" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h4 class="text-xs-center display-4" id="myModalLabel">
+                                Instructions
+                            </h4>
+                            <hr>
+                            <p class="text-muted">
+                                Essayer de deviner la prononciation de la lettre arabe proposée. Afficher la solution en ciquant sur le bouton solution ou en appuyant sur la barre d'espace.
+                            </p>
+                            <p class="text-muted">
+                                Lorsque la solution s'affiche, la lettre est prononcée avec une voyelle courte (a). Vous pouvez couper le son si vous le souhaitez.
+                            </p>
+                            <p class="text-muted">
+                                Vous pouvez utiliser des raccourcis clavier pour afficher la solution (barre espace) et la flèche de droite pour passer à la prochaine lettre.
+                            </p>
+                            <p class="text-muted">
+                                Vous pouvez changer le sens de l'apprentissage, en passant de la phonétique à la lettre arabe.
+                            </p>
+                            <p class="text-muted">
+                                Si vous avez un doute et que vous voulez revoir votre connaissance de l'alphabet arabe, retourner à la <a href="http://apprendrearabe.eu/alphabet/lecon-2">leçon 2</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="http://apprendrearabe.eu">
+                <i class="fa fa-arrow-left text-muted" aria-hidden="true" style="font-size: 25px;"></i>
+            </a>
+            <a href="#" data-toggle="modal" data-target="#modal-fullscreen">
+                <i class="fa fa-question-circle pull-right text-muted" aria-hidden="true" style="font-size: 25px;"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-xs-center">
+            <p class="lead text-muted" style="margin-bottom: 3px;">
+                Niveau 2
+            </p>
+            <h1>
+                L'alphabet Arabe
+            </h1>
+            <br>
+        </div>
+    </div>
+</div>
+
+<div id="app">
+    <div class="container">
+        <div class="col-md-12 text-xs-center">
+            <img src="/img/ring.gif" alt="loading" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row text-xs-center">
+        <div class="col-lg-4 col-lg-offset-4 text-xs-center">
+            <br>
+            <button class="btn btn-secondary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-fullscreen">
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Instructions
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<script src="/vendors/nprogress.js"></script>
+<script>
+
+    NProgress.start();
+    setTimeout( function() {
+        NProgress.done();
+    }, 1000);
+
+    $( document ).ready( function() {
+
+        $('a').on( 'click' , function(){
+            if( $(this).attr('href') != '#' ){
+                NProgress.start();
+            }
+        });
+    });
+</script>
+
+<script src="/vendors/react.min.js"></script>
+<script src="/vendors/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="/vendors/keymaster.js"></script>
+
+
+<script src="/resources/letters.js"></script>
+<script type="text/babel" src="/app/alphabet_2.jsx"></script>
+
+    </body>
+</html>
